@@ -23,12 +23,12 @@ const Avatar = styled.img`
 
 function UserAvatar() {
   const { user } = useUser();
-  const { fullName, avatar } = user.user_metadata;
+  const { fullName } = user.user_metadata;
 
   return (
     <StyledUserAvatar>
       <Avatar
-        src={avatar || "default-user.jpg"}
+        src="https://ndriuclasgbtlydpbtnn.supabase.co/storage/v1/object/public/avatars/avatar.jpg"
         alt={`Avatar of ${fullName}`}
       />
       <span>{fullName}</span>
